@@ -1,0 +1,38 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/os/various/cpp_wrappers",
+                "${workspaceFolder}/os/rt/include",
+                "${workspaceFolder}/cfg",
+                "${workspaceFolder}/os/license",
+                "${workspaceFolder}/os/common/ports/ARMCMx/compilers/GCC",
+                "${workspaceFolder}/os/common/ports/ARMCMx",
+                "${workspaceFolder}/os/common/startup/ARMCMx/devices/STM32F1xx",
+                "${workspaceFolder}/board",
+                "${workspaceFolder}/os/common/ext/ST/STM32F1xx",
+                "${workspaceFolder}/os/common/ext/ARM/CMSIS/Core/Include",
+                "${workspaceFolder}/os/hal/include",
+                "${workspaceFolder}/os/hal/ports/STM32/LLD/TIMv1",
+                "${workspaceFolder}/os/hal/ports/STM32/STM32F1xx",
+                "${workspaceFolder}/os/lib/include",
+                "${workspaceFolder}/os/hal/osal/rt",
+                "${workspaceFolder}/os/hal/ports/common/ARMCMx",
+                "${workspaceFolder}/os/hal/ports/STM32/LLD/DMAv1",
+                "${workspaceFolder}/os/hal/ports/STM32/LLD/GPIOv1",
+                "${workspaceFolder}/os/hal/ports/STM32/LLD/CANv1",
+                "${workspaceFolder}/os/hal/ports/STM32/LLD/I2Cv1",
+                "${workspaceFolder}/os/hal/ports/STM32/LLD/USARTv1",
+                "${workspaceFolder}/os/various/shell",
+                "${workspaceFolder}/os/hal/lib/streams"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}
