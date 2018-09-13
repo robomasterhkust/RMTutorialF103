@@ -29,8 +29,6 @@
 
 #include "shell.h"
 #include "chprintf.h"
-#include <stdlib.h>
-#include <cstring>
 
 using namespace chibios_rt;
 
@@ -50,11 +48,14 @@ int main(void)
   halInit();
   chSysInit();
 
+
+  volatile int i =0;
   /*
    * Normal main() thread activity
    */
   while (true)
   {
+    i++;
     systime_t startT = chibios_rt::System::getTime();
 
     //do something..
