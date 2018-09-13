@@ -1,10 +1,11 @@
-# For Windows, refer to the Wiki pages
+# For Windows, refer to the [Wiki](https://github.com/robomasterhkust/RMTutorialF103/wiki) pages
 
 # For Unix system(Tested on Ubuntu 16.04 & Mac OS Sierra 10.12.6)
 By Yang Shaohui, Alex Au on 2018.09.13
 
 ## Getting started on Unix
 run the following commands in the project directory
+#### The mac part is wrongly documented, to be fixed 
 1.  `sudo apt-get install openocd gcc-arm-none-eabi` under linux or `brew install openocd gcc-arm-none-eabi` under OSX. If you do not have homebrew installed yet, go to https://brew.sh. 
 
 2. `git clone` and `cd` into this repository
