@@ -5,13 +5,21 @@ By Yang Shaohui, Alex Au on 2018.09.13
 
 ## Getting started on Unix
 run the following commands in the project directory
-1.  `sudo apt-get install openocd gcc-arm-none-eabi` under linux. 
+1.  For Linux, ubuntu to be exact: 
+    `sudo apt-get install openocd gcc-arm-none-eabi`
 
+    For Mac OSX, do the following: install homebrew first via https://brew.sh
+    
+    then install the XCode command line toolchain `xcode-select --install`
+    
+    `brew cask install xquartz java`
+    
     `brew install open-ocd`
+    
     `brew tap PX4/px4`
-    `brew install px4-dev` under OSX. 
-    `brew cask install xquartz java` might be needed. Also, the XCode command line toolchain is needed as dependency. If you do not have homebrew installed yet, go to https://brew.sh. 
-
+    
+    `brew install px4-dev` 
+    
 2. `git clone` and `cd` into this repository
 
 4. `make` or `make -j4` where 4 is the thread count
