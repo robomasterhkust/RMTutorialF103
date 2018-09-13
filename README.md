@@ -7,7 +7,9 @@ By Yang Shaohui, Alex Au on 2018.09.13
 run the following commands in the project directory
 1.  `sudo apt-get install openocd gcc-arm-none-eabi` under linux. 
 
-    `brew install open-ocd``brew tap PX4/px4``brew install px4-dev` under OSX. If you do not have homebrew installed yet, go to https://brew.sh. 
+    `brew install open-ocd`
+    `brew tap PX4/px4`
+    `brew install px4-dev` under OSX. If you do not have homebrew installed yet, go to https://brew.sh. 
 
 2. `git clone` and `cd` into this repository
 
