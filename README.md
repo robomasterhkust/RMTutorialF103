@@ -1,4 +1,4 @@
-# For Windows, refer to the [Wiki](https://github.com/robomasterhkust/RMTutorialF103/wiki) pages
+# For Windows, refer to the [Wiki](https://github.com/robomasterhkust/RMTutorialF103/wiki/1_0_Setup_ChibiStudio_Windows) pages
 
 # For Unix system(Tested on Ubuntu 16.04 & Mac OS Sierra 10.12.6)
 By Yang Shaohui, Alex Au on 2018.09.13
