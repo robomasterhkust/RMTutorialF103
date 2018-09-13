@@ -20,7 +20,8 @@ run the following commands in the project directory
     
     `brew install px4-dev` 
     
-2. `git clone` and `cd` into this repository
+2. `git clone https://github.com/robomasterhkust/RMTutorialF103` and
+`cd RMTutorialF103` in your preferred directory
 
 4. `make` or `make -j4` where 4 is the thread count
 
