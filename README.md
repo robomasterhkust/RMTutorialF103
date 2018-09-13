@@ -9,7 +9,8 @@ run the following commands in the project directory
 
     `brew install open-ocd`
     `brew tap PX4/px4`
-    `brew install px4-dev` under OSX. If you do not have homebrew installed yet, go to https://brew.sh. 
+    `brew install px4-dev` under OSX. 
+    `brew cask install xquartz java` might be needed. Also, the XCode command line toolchain is needed as dependency. If you do not have homebrew installed yet, go to https://brew.sh. 
 
 2. `git clone` and `cd` into this repository
 
