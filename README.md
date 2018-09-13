@@ -1,9 +1,9 @@
 # For Windows, refer to the Wiki pages
 
-# For Unix system(Linux & Mac OSX) only
+# For Unix system(Tested on Ubuntu 16.04 & Mac OS Sierra 10.12.6)
 By Yang Shaohui, Alex Au on 2018.09.13
 
-## Getting started
+## Getting started on Unix
 run the following commands in the project directory
 1.  `sudo apt-get install openocd gcc-arm-none-eabi` under linux or `brew install openocd gcc-arm-none-eabi` under OSX. If you do not have homebrew installed yet, go to https://brew.sh. 
 
@@ -16,3 +16,6 @@ run the following commands in the project directory
 #### Optional:
 - for debugging, run `openocd -f openocd/start_st-link_debug.cfg` , followed by a gdb connection with you own IDE/editor, the VSCode configuration is provided and is used with the "Native Debug" extension
 - of course you can always use `telnet localhost 4444` and use terminal to interface with the openocd debug server directly
+
+## Submitting assignments 
+This part will come up later on. 
