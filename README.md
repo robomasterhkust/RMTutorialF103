@@ -28,7 +28,7 @@ run the following commands in the project directory
 5. run `openocd -f openocd/start_st-link_flash.cfg` with board connected via st-link to flash the program
 ---
 #### Optional:
-- for debugging, run `openocd -f openocd/start_st-link_debug.cfg` , followed by a gdb connection with you own IDE/editor, the VSCode configuration is provided and is used with the "Native Debug" extension
+- for debugging, run `openocd -f openocd/start_st-link_debug.cfg` , followed by a gdb connection with you own IDE/editor, the VSCode configuration is provided and is used with the "Cortex-Debug" extension
 - of course you can always use `telnet localhost 4444` and use terminal to interface with the openocd debug server directly
 
 ## Submitting assignments 
