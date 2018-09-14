@@ -5,19 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "gdb",
-            "request": "launch",
-            "name": "Debug MCU",
-            "target": "${workspaceRoot}/build/RMInternalDev.elf",
             "cwd": "${workspaceRoot}",
-            "gdbpath": "arm-none-eabi-gdb.exe",
+            "executable": "${workspaceRoot}/build/RMInternalDev.elf",
+            "name": "Debug Microcontroller",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
             "linux": {
-                "gdbpath": "arm-none-eabi-gdb",
+                "armToolchainPath": "/usr/bin",
             },
-            "autorun": [
-                "target remote localhost:3333",
-                "symbol-file ${workspaceRoot}/build/RMInternalDev.elf",
-                "monitor reset halt"
+            "windows": {},
+            "configFiles": [
+                "${workspaceRoot}/openocd/start_st-link_debug.cfg"
             ]
         }
     ]

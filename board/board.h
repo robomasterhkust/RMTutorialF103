@@ -26,13 +26,13 @@
  * Board identifier.
  */
 #define BOARD_MINIMAL_STM32_F103
-#define BOARD_NAME              "STM32F103 Forest V1"
+#define BOARD_NAME "STM32F103 Forest V1"
 
 /*
  * Board frequencies.
  */
-#define STM32_LSECLK            0
-#define STM32_HSECLK            8000000
+#define STM32_LSECLK 0
+#define STM32_HSECLK 8000000
 
 /*
  * MCU type, supported types are defined in ./os/hal/platforms/hal_lld.h.
@@ -53,35 +53,37 @@
 
 /* on-board */
 
-#define GPIOA_LED               8U
-#define GPIOA_BUTTON            15U
+#define LED_ON_STATE 0
+#define BUTTON_PRESSED_STATE 0
 
-#define GPIOA_CAN_RX            11U
-#define GPIOA_CAN_TX            12U
+#define GPIOA_LED 8U
+#define GPIOA_BUTTON 15U
 
-#define GPIOA_USART1_TX         9U
-#define GPIOA_USART1_RX         10U
+#define GPIOA_CAN_RX 11U
+#define GPIOA_CAN_TX 12U
 
-#define GPIOA_SERIAL_USB_RX     GPIOA_USART1_RX
-#define GPIOA_SERIAL_USB_TX     GPIOA_USART1_TX
+#define GPIOA_USART1_TX 9U
+#define GPIOA_USART1_RX 10U
 
-#define GPIOA_USART2_TX         2U
-#define GPIOA_USART2_RX         3U
+#define GPIOA_SERIAL_USB_RX GPIOA_USART1_RX
+#define GPIOA_SERIAL_USB_TX GPIOA_USART1_TX
 
-#define GPIOB_I2C2_SCL          10U
-#define GPIOB_I2C2_SDA          11U
+#define GPIOA_USART2_TX 2U
+#define GPIOA_USART2_RX 3U
 
-#define GPIOB_MPU6050_INT       3U
-#define GPIOB_MPU6050_SCL       GPIOB_I2C2_SCL
-#define GPIOB_MPU6050_SDA       GPIOB_I2C2_SDA
+#define GPIOB_I2C2_SCL 10U
+#define GPIOB_I2C2_SDA 11U
 
-//only HSE which uses the following pin, no LSE 
-#define GPIOC_OSC_IN          14U
-#define GPIOC_OSC_OUT         15U
+#define GPIOB_MPU6050_INT 3U
+#define GPIOB_MPU6050_SCL GPIOB_I2C2_SCL
+#define GPIOB_MPU6050_SDA GPIOB_I2C2_SDA
 
-
+//only HSE which uses the following pin, no LSE
+#define GPIOC_OSC_IN 14U
+#define GPIOC_OSC_OUT 15U
 
 #define LINE_LED PAL_LINE(GPIOA, GPIOA_LED)
+#define LINE_BUTTON PAL_LINE(GPIOA, GPIOA_BUTTON)
 
 /*
 following refer to stm32f1 reference manual section 9.1
@@ -121,9 +123,9 @@ following refer to stm32f1 reference manual section 9.1
  * B - (GPIOA_USART1_TX 9)
  * B - (GPIOA_USART2_TX 2)
  */
-#define VAL_GPIOACRL            0x88888B88      /*  PA7...PA0 */
-#define VAL_GPIOACRH            0x488B48B5      /* PA15...PA8 */
-#define VAL_GPIOAODR            0xFFFFFFFF
+#define VAL_GPIOACRL 0x88888B88 /*  PA7...PA0 */
+#define VAL_GPIOACRH 0x488B48B5 /* PA15...PA8 */
+#define VAL_GPIOAODR 0xFFFFFFFF
 
 /*
  * Port B setup.
@@ -132,18 +134,18 @@ following refer to stm32f1 reference manual section 9.1
  * E - (GPIOB_I2C2_SDA 11)
  * 4 - (GPIOB_MPU6050_INT 3)
  */
-#define VAL_GPIOBCRL            0x88888888      /*  PB7...PB0 */
-#define VAL_GPIOBCRH            0x8888FF88      /* PB15...PB8 */
-#define VAL_GPIOBODR            0xFFFFFFFF
+#define VAL_GPIOBCRL 0x88888888 /*  PB7...PB0 */
+#define VAL_GPIOBCRH 0x8888FF88 /* PB15...PB8 */
+#define VAL_GPIOBODR 0xFFFFFFFF
 
 /*
  * Port C setup.
  * Everything input with pull-up except:
  * PC13 - Digital output (LED).
  */
-#define VAL_GPIOCCRL            0x88888888      /*  PC7...PC0 */
-#define VAL_GPIOCCRH            0x88888888      /* PC15...PC8 */
-#define VAL_GPIOCODR            0xFFFFFFFF
+#define VAL_GPIOCCRL 0x88888888 /*  PC7...PC0 */
+#define VAL_GPIOCCRH 0x88888888 /* PC15...PC8 */
+#define VAL_GPIOCODR 0xFFFFFFFF
 
 /*
  * Port D setup.
@@ -151,17 +153,17 @@ following refer to stm32f1 reference manual section 9.1
  * PD0  - Normal input (XTAL).
  * PD1  - Normal input (XTAL).
  */
-#define VAL_GPIODCRL            0x88888888      /*  PD7...PD0 */
-#define VAL_GPIODCRH            0x88888888      /* PD15...PD8 */
-#define VAL_GPIODODR            0xFFFFFFFF
+#define VAL_GPIODCRL 0x88888888 /*  PD7...PD0 */
+#define VAL_GPIODCRH 0x88888888 /* PD15...PD8 */
+#define VAL_GPIODODR 0xFFFFFFFF
 
 /*
  * Port E setup.
  * Everything input with pull-up except:
  */
-#define VAL_GPIOECRL            0x88888888      /*  PE7...PE0 */
-#define VAL_GPIOECRH            0x88888888      /* PE15...PE8 */
-#define VAL_GPIOEODR            0xFFFFFFFF
+#define VAL_GPIOECRL 0x88888888 /*  PE7...PE0 */
+#define VAL_GPIOECRH 0x88888888 /* PE15...PE8 */
+#define VAL_GPIOEODR 0xFFFFFFFF
 
 // /*
 //  * USB bus activation macro, required by the USB driver.
@@ -175,9 +177,10 @@ following refer to stm32f1 reference manual section 9.1
 
 #if !defined(_FROM_ASM_)
 #ifdef __cplusplus
-extern "C" {
+extern "C"
+{
 #endif
-  void boardInit(void);
+    void boardInit(void);
 #ifdef __cplusplus
 }
 #endif

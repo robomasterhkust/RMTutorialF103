@@ -32,6 +32,39 @@
 
 using namespace chibios_rt;
 
+bool ledOn = true;
+
+THD_WORKING_AREA(blinker_wa, 128);
+THD_FUNCTION(blinker, arg)
+{
+  (void)arg;
+  while (!chThdShouldTerminateX())
+  {
+    if (ledOn)
+    {
+      palToggleLine(LINE_LED);
+      chThdSleepMilliseconds(250);
+    }
+    else
+    {
+      chThdSleepMilliseconds(50);
+    }
+  }
+};
+
+void buttonPressedCallback(void *arg)
+{
+  (void)arg;
+  chibios_rt::System::lockFromIsr(); //same as chSysLockFromISR();
+  if (palReadLine(LINE_BUTTON) == BUTTON_PRESSED_STATE)
+  {
+    ledOn = !ledOn;
+    if (!ledOn)
+      palWriteLine(LINE_LED, ~LED_ON_STATE);
+  }
+  chSysUnlockFromISR();
+}
+
 /*
  * Application entry point.
  */
@@ -48,8 +81,12 @@ int main(void)
   halInit();
   chSysInit();
 
+  chThdCreateStatic(blinker_wa, sizeof(blinker_wa), NORMALPRIO, blinker, NULL);
 
-  volatile int i =0;
+  palEnableLineEvent(LINE_BUTTON, PAL_EVENT_MODE_FALLING_EDGE);
+  palSetLineCallback(LINE_BUTTON, buttonPressedCallback, NULL);
+
+  volatile int i = 0;
   /*
    * Normal main() thread activity
    */
@@ -59,7 +96,7 @@ int main(void)
     systime_t startT = chibios_rt::System::getTime();
 
     //do something..
-    
+
     chibios_rt::BaseThread::sleepUntil(startT + TIME_MS2I(500));
     //chThdSleepMilliseconds(500); <- any difference using this?
   }
