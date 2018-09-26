@@ -5,3 +5,5 @@ ozoneProj.jdebug.user
 .cproject
 .project
 .settings/language.settings.xml
+.vscode/.cortex-debug.registers.state.json
+.vscode/.cortex-debug.peripherals.state.json
